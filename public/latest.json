@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-13T06:39:36.929178+00:00",
+  "generatedAt": "2026-03-13T07:11:20.683727+00:00",
   "runtime": "2026031300",
   "runtimeSource": "aws-hrrrzarr",
   "maxFrame": 17,
   "bounds": [
     [
-      -3.1797770077934757,
-      -122.73660951943715
+      21.117672277392828,
+      -134.12161459032944
     ],
     [
-      24.370222992206525,
-      -72.23660951943715
+      52.61767227739283,
+      -60.87161459032944
     ]
   ],
   "logs": [
@@ -19,7 +19,9 @@
     "trying runtime 2026031300",
     "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::8m_above_ground/MASSDEN",
     "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
-    "using runtime 2026031300 from public AWS HRRR Zarr"
+    "using runtime 2026031300 from public AWS HRRR Zarr",
+    "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+    "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)"
   ],
   "layers": {
     "trc1_full_sfc": {
