@@ -2,13 +2,16 @@
 
 Leaflet-based viewer for NOAA HRRR-Smoke forecast frames, deployed via GitHub Pages.
 
-## Features
+## What changed
 
-- interactive Leaflet base map
-- NOAA smoke PNG frames overlaid directly on the map
-- selectable smoke layers
-- forecast-hour slider and autoplay
-- scheduled manifest refresh via GitHub Actions
+This version caches NOAA PNG frames into the repo during GitHub Actions instead of hotlinking every frame from the browser.
+
+That means:
+
+- less NOAA throttling pain
+- same-origin images on GitHub Pages
+- the first 18 forecast hours should animate reliably on-map
+- an in-page debug console is available for troubleshooting
 
 ## Local development
 
@@ -18,21 +21,15 @@ npm run update-manifest
 npm run dev
 ```
 
-## Deploy on GitHub Pages
+## Deploy behavior
 
-Push to `main`. The workflow will:
+Push to `main` or wait for the hourly workflow. The workflow will:
 
 1. fetch the latest NOAA runtime server-side
-2. write `public/latest.json`
-3. build the site
-4. deploy to GitHub Pages
-
-It also refreshes hourly on a GitHub Actions cron.
+2. download cached PNGs for forecast hours 0-18 for each smoke layer
+3. write `public/latest.json`
+4. build and deploy to GitHub Pages
 
 ## NOAA source
 
 - <https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/>
-
-## Why this architecture
-
-GitHub Pages cannot reliably scrape NOAA live from the browser because NOAA does not expose the needed data with browser-friendly CORS behavior. So the app uses a same-origin manifest generated in GitHub Actions, then loads NOAA frame PNGs directly onto the map.
