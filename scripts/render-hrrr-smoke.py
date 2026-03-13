@@ -47,11 +47,13 @@ def latest_cycle_utc(now=None):
     return dt
 
 
-def cycle_candidates():
+def cycle_candidates(long_only=False):
     dt = latest_cycle_utc()
-    for step in range(0, 36, 6):
-        cand = dt.timestamp() - step * 3600
-        yield datetime.fromtimestamp(cand, tz=timezone.utc)
+    for step in range(0, 36, 1):
+        cand = datetime.fromtimestamp(dt.timestamp() - step * 3600, tz=timezone.utc)
+        if long_only and cand.hour not in (0, 6, 12, 18):
+            continue
+        yield cand
 
 
 def open_dataset(run_dt, layer):
@@ -147,62 +149,53 @@ def save_png(rgba, path):
     Image.fromarray(rgba, mode='RGBA').save(path)
 
 
-def main():
-    PUBLIC.mkdir(parents=True, exist_ok=True)
-    CACHE.mkdir(parents=True, exist_ok=True)
-
+def resolve_mode_runtime(long_only=False):
     chosen_run = None
     sources = {}
-    startup_logs = []
-    for run_dt in cycle_candidates():
+    logs = []
+    for run_dt in cycle_candidates(long_only=long_only):
         try:
-            startup_logs.append(f"trying runtime {run_dt.strftime('%Y%m%d%H')}")
+            logs.append(f"trying runtime {run_dt.strftime('%Y%m%d%H')} long_only={long_only}")
             for key, layer in LAYERS.items():
                 store, ds, var = open_dataset(run_dt, layer)
                 sources[key] = {'store': store, 'dataset': ds, 'var': var}
-                startup_logs.append(f"opened {key} from {store}")
+                logs.append(f"opened {key} from {store}")
             chosen_run = run_dt
             break
         except Exception as e:
-            startup_logs.append(f"failed runtime {run_dt.strftime('%Y%m%d%H')}: {e}")
+            logs.append(f"failed runtime {run_dt.strftime('%Y%m%d%H')}: {e}")
             sources = {}
             continue
+    return chosen_run, sources, logs
 
-    if chosen_run is None:
-        raise SystemExit('Could not open any recent HRRR smoke zarr run\n' + '\n'.join(startup_logs))
 
-    runtime = chosen_run.strftime('%Y%m%d%H')
-    runtime_cache = CACHE / runtime
-    if runtime_cache.exists():
-        pass
-    else:
-        runtime_cache.mkdir(parents=True, exist_ok=True)
-    for old in CACHE.iterdir():
-        if old.is_dir() and old.name != runtime:
-            shutil.rmtree(old, ignore_errors=True)
+def render_mode(runtime, sources, mode_name, startup_logs, long_only=False):
+    runtime_cache = CACHE / runtime / mode_name
+    runtime_cache.mkdir(parents=True, exist_ok=True)
 
-    manifest = {
-        'generatedAt': datetime.now(timezone.utc).isoformat(),
+    mode_manifest = {
         'runtime': runtime,
-        'runtimeSource': 'aws-hrrrzarr',
+        'longOnlyCycle': long_only,
         'maxFrame': 0,
         'bounds': None,
-        'logs': startup_logs + [f'using runtime {runtime} from public AWS HRRR Zarr'],
+        'logs': list(startup_logs),
         'layers': {},
     }
+    mode_manifest['logs'].append(f'using runtime {runtime} from public AWS HRRR Zarr mode={mode_name}')
 
     for key, layer in LAYERS.items():
         ds = sources[key]['dataset']
         var = sources[key]['var']
         src_crs, src_transform, src_bounds = build_source_transform(var)
-        manifest['logs'].append(f"source bounds {key}: {src_bounds}")
+        mode_manifest['logs'].append(f"source bounds {key}: {src_bounds}")
         layer_cache = runtime_cache / key
         layer_cache.mkdir(parents=True, exist_ok=True)
         frames = []
         available = []
         layer_bounds = None
-        frame_count = min(int(var.sizes['time']), MAX_RENDER_FRAME + 1)
-        manifest['logs'].append(f"frame count {key}: {frame_count}")
+        frame_limit = 49 if long_only else 19
+        frame_count = min(int(var.sizes['time']), frame_limit)
+        mode_manifest['logs'].append(f"frame count {key}: {frame_count}")
         for frame in range(frame_count):
             try:
                 data = var.isel(time=frame).values
@@ -214,20 +207,62 @@ def main():
                 available.append(frame)
             except Exception as e:
                 frames.append({'frame': frame, 'url': None, 'cached': False, 'error': str(e)})
-                manifest['logs'].append(f'failed {key} F{frame:03d}: {e}')
-        manifest['layers'][key] = {
+                mode_manifest['logs'].append(f'failed {key} F{frame:03d}: {e}')
+        mode_manifest['layers'][key] = {
             'label': layer['label'],
             'units': layer['units'],
             'frames': frames,
             'availableFrames': available,
             'store': sources[key]['store'],
         }
-        manifest['maxFrame'] = max(manifest['maxFrame'], (available[-1] if available else 0))
-        if layer_bounds is not None and manifest['bounds'] is None:
-            manifest['bounds'] = layer_bounds
+        mode_manifest['maxFrame'] = max(mode_manifest['maxFrame'], (available[-1] if available else 0))
+        if layer_bounds is not None and mode_manifest['bounds'] is None:
+            mode_manifest['bounds'] = layer_bounds
+    return mode_manifest
+
+
+def main():
+    PUBLIC.mkdir(parents=True, exist_ok=True)
+    CACHE.mkdir(parents=True, exist_ok=True)
+
+    short_run, short_sources, short_logs = resolve_mode_runtime(long_only=False)
+    if short_run is None:
+        raise SystemExit('Could not open any recent HRRR smoke zarr run\n' + '\n'.join(short_logs))
+
+    long_run, long_sources, long_logs = resolve_mode_runtime(long_only=True)
+    if long_run is None:
+        long_logs = long_logs + ['long-range mode unavailable']
+
+    # clean old runtimes
+    keep = {short_run.strftime('%Y%m%d%H')}
+    if long_run is not None:
+        keep.add(long_run.strftime('%Y%m%d%H'))
+    for old in CACHE.iterdir():
+        if old.is_dir() and old.name not in keep:
+            shutil.rmtree(old, ignore_errors=True)
+
+    short_runtime = short_run.strftime('%Y%m%d%H')
+    manifest = {
+        'generatedAt': datetime.now(timezone.utc).isoformat(),
+        'runtime': short_runtime,
+        'runtimeSource': 'aws-hrrrzarr',
+        'modes': {
+            'hourly': render_mode(short_runtime, short_sources, 'hourly', short_logs, long_only=False)
+        }
+    }
+
+    if long_run is not None:
+        long_runtime = long_run.strftime('%Y%m%d%H')
+        manifest['modes']['long'] = render_mode(long_runtime, long_sources, 'long', long_logs, long_only=True)
+
+    default_mode = manifest['modes']['hourly']
+    manifest['maxFrame'] = default_mode['maxFrame']
+    manifest['bounds'] = default_mode['bounds']
+    manifest['layers'] = default_mode['layers']
+    manifest['logs'] = default_mode['logs']
 
     OUT.write_text(json.dumps(manifest, indent=2) + '\n')
-    print(f'Wrote {OUT} for runtime {runtime}')
+    print(f'Wrote {OUT} for runtime {short_runtime}')
 
 
 if __name__ == '__main__':

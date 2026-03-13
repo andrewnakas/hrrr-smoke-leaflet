@@ -77,8 +77,12 @@ function padFrame(frame) {
   return String(frame).padStart(3, '0');
 }
 
+function activeModeData() {
+  return state.manifest?.modes?.[state.forecastMode] || state.manifest || null;
+}
+
 function getLayerData() {
-  return state.manifest?.layers?.[state.layer] || null;
+  return activeModeData()?.layers?.[state.layer] || null;
 }
 
 function getFrameRecord() {
@@ -166,7 +170,7 @@ async function analyzeOverlay(url, bounds) {
 }
 
 function applyOverlay(url) {
-  const bounds = state.manifest?.bounds || DEFAULT_BOUNDS;
+  const bounds = activeModeData()?.bounds || DEFAULT_BOUNDS;
   if (state.overlay) {
     state.overlay.setBounds(bounds);
     state.overlay.setUrl(url);
@@ -207,6 +211,8 @@ function nearestAvailableFrame(requested) {
 
 function updateMap() {
   if (!state.manifest) return;
+  const modeData = activeModeData();
+  if (!modeData) return;
   const adjusted = nearestAvailableFrame(state.frame);
   if (adjusted !== state.frame) {
     log('adjusted frame to available cache', { requested: state.frame, adjusted });
@@ -225,10 +231,10 @@ function updateMap() {
   }
 
   applyOverlay(record.url);
-  setMapBadge(`${label} · runtime ${state.manifest.runtime} · F${frame}`);
+  setMapBadge(`${label} · runtime ${modeData.runtime} · F${frame}`);
   els.frameLabel.textContent = `F${frame}`;
   els.openNoaaLink.href = layer?.store || 'https://registry.opendata.aws/noaa-hrrr-pds/';
-  setStatus(`Showing ${label}, runtime ${state.manifest.runtime}, forecast F${frame}.`);
+  setStatus(`Showing ${label}, runtime ${modeData.runtime}, forecast F${frame} (${state.forecastMode}).`);
 }
 
 async function loadManifest() {
@@ -238,12 +244,18 @@ async function loadManifest() {
     if (!response.ok) throw new Error(`Manifest HTTP ${response.status}`);
     const manifest = await response.json();
     state.manifest = manifest;
-    const bounds = manifest.bounds || DEFAULT_BOUNDS;
+    if (state.forecastMode === 'long' && !manifest.modes?.long) {
+      state.forecastMode = 'hourly';
+      els.forecastModeSelect.value = 'hourly';
+    }
+    const modeData = activeModeData();
+    const bounds = modeData?.bounds || DEFAULT_BOUNDS;
     smokeBoundsRect.setBounds(bounds);
-    els.frameSlider.max = String(manifest.maxFrame ?? 17);
-    els.frameSlider.step = state.forecastMode === '6hour' ? '6' : '1';
-    els.runtimeMeta.textContent = `Runtime: ${manifest.runtime} · source: ${manifest.runtimeSource} · generated: ${manifest.generatedAt}`;
-    log('manifest loaded', { runtime: manifest.runtime, source: manifest.runtimeSource, maxFrame: manifest.maxFrame, bounds: manifest.bounds, logs: manifest.logs?.slice(-8) });
+    els.frameSlider.max = String(modeData?.maxFrame ?? 17);
+    els.frameSlider.step = '1';
+    const runtimeText = Object.entries(manifest.modes || {}).map(([k,v]) => `${k}:${v.runtime}`).join(' · ');
+    els.runtimeMeta.textContent = `Runtime(s): ${runtimeText || manifest.runtime} · source: ${manifest.runtimeSource} · generated: ${manifest.generatedAt}`;
+    log('manifest loaded', { runtime: manifest.runtime, source: manifest.runtimeSource, mode: state.forecastMode, modeMaxFrame: modeData?.maxFrame, bounds: modeData?.bounds, logs: modeData?.logs?.slice(-8) });
     updateMap();
   } catch (error) {
     log('manifest load failed', { message: error.message });
@@ -264,7 +276,7 @@ function startPlayback() {
   state.playing = true;
   els.playButton.textContent = 'Pause';
   const available = activeAvailableFrames();
-  log('playback started', { available });
+  log('playback started', { mode: state.forecastMode, available });
   state.timer = setInterval(() => {
     const idx = available.indexOf(state.frame);
     const next = available[(idx + 1) % available.length] ?? available[0] ?? 0;
@@ -288,8 +300,15 @@ els.frameSlider.addEventListener('input', () => {
 
 els.forecastModeSelect.addEventListener('change', () => {
   state.forecastMode = els.forecastModeSelect.value;
-  els.frameSlider.step = state.forecastMode === '6hour' ? '6' : '1';
-  log('forecast mode changed', { mode: state.forecastMode });
+  if (state.forecastMode === 'long' && !state.manifest?.modes?.long) {
+    state.forecastMode = 'hourly';
+    els.forecastModeSelect.value = 'hourly';
+    log('long mode unavailable; reverted to hourly');
+  }
+  const modeData = activeModeData();
+  els.frameSlider.max = String(modeData?.maxFrame ?? 17);
+  els.frameSlider.step = '1';
+  log('forecast mode changed', { mode: state.forecastMode, runtime: modeData?.runtime, maxFrame: modeData?.maxFrame });
   updateMap();
 });
 
