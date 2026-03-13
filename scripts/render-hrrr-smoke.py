@@ -21,12 +21,6 @@ OUT = PUBLIC / 'latest.json'
 CACHE = PUBLIC / 'cache-raw'
 
 PROJ4 = '+proj=lcc +a=6371200.0 +b=6371200.0 +lon_0=262.5 +lat_0=38.5 +lat_1=38.5 +lat_2=38.5'
-NX = 1799
-NY = 1059
-DX = 3000.0
-DY = 3000.0
-FIRST_LON = -122.719528
-FIRST_LAT = 21.138123
 MAX_FRAME = 18
 LAYERS = {
     'trc1_full_sfc': {
@@ -94,11 +88,18 @@ def open_dataset(run_dt, layer):
     return f"{store}::{group}", None, var
 
 
-def build_source_transform():
+def build_source_transform(var):
     src_crs = CRS.from_proj4(PROJ4)
-    to_proj = Transformer.from_crs('EPSG:4326', src_crs, always_xy=True)
-    x0, y0 = to_proj.transform(FIRST_LON, FIRST_LAT)
-    return src_crs, from_origin(x0 - DX / 2.0, y0 + DY / 2.0, DX, DY)
+    x = np.asarray(var.coords['projection_x_coordinate'].values, dtype='float64')
+    y = np.asarray(var.coords['projection_y_coordinate'].values, dtype='float64')
+    dx = float(np.median(np.diff(x)))
+    dy = float(np.median(np.diff(y)))
+    west = float(x.min() - dx / 2.0)
+    east = float(x.max() + dx / 2.0)
+    south = float(y.min() - abs(dy) / 2.0)
+    north = float(y.max() + abs(dy) / 2.0)
+    transform = from_origin(west, north, abs(dx), abs(dy))
+    return src_crs, transform, (west, south, east, north)
 
 
 def smoke_rgba(data, scale_max):
@@ -116,9 +117,9 @@ def smoke_rgba(data, scale_max):
     return rgba
 
 
-def warp_rgba(rgba, src_transform, src_crs):
+def warp_rgba(rgba, src_transform, src_crs, src_bounds):
     height, width = rgba.shape[:2]
-    left, bottom, right, top = rasterio.transform.array_bounds(height, width, src_transform)
+    left, bottom, right, top = src_bounds
     dst_transform, dst_width, dst_height = calculate_default_transform(
         src_crs, 'EPSG:4326', width, height, left, bottom, right, top, resolution=0.05
     )
@@ -149,7 +150,6 @@ def save_png(rgba, path):
 def main():
     PUBLIC.mkdir(parents=True, exist_ok=True)
     CACHE.mkdir(parents=True, exist_ok=True)
-    src_crs, src_transform = build_source_transform()
 
     chosen_run = None
     sources = {}
@@ -194,6 +194,8 @@ def main():
     for key, layer in LAYERS.items():
         ds = sources[key]['dataset']
         var = sources[key]['var']
+        src_crs, src_transform, src_bounds = build_source_transform(var)
+        manifest['logs'].append(f"source bounds {key}: {src_bounds}")
         layer_cache = runtime_cache / key
         layer_cache.mkdir(parents=True, exist_ok=True)
         frames = []
@@ -203,7 +205,7 @@ def main():
             try:
                 data = var.isel(time=frame).values
                 rgba = smoke_rgba(data, layer['scale_max'])
-                warped, layer_bounds = warp_rgba(rgba, src_transform, src_crs)
+                warped, layer_bounds = warp_rgba(rgba, src_transform, src_crs, src_bounds)
                 rel = f'./cache-raw/{runtime}/{key}/f{frame:03d}.png'
                 save_png(warped, PUBLIC / rel.replace('./', ''))
                 frames.append({'frame': frame, 'url': rel, 'cached': True})
