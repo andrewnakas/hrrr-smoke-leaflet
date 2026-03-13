@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "update-manifest": "node ./scripts/update-noaa-manifest.mjs"
+    "update-manifest": "node ./scripts/update-noaa-manifest.mjs",
+    "render-raw-smoke": "python3 ./scripts/render-hrrr-smoke.py"
   },
   "devDependencies": {
     "vite": "^5.4.19"

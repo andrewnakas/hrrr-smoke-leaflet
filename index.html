@@ -11,22 +11,20 @@
     <div id="app">
       <aside class="sidebar">
         <h1>HRRR Smoke Forecast</h1>
-        <p class="lede">NOAA HRRR-Smoke forecast frames cached into the site and rendered directly on the Leaflet map.</p>
+        <p class="lede">Raw HRRR smoke data rendered into transparent overlays on the Leaflet map.</p>
 
         <div class="controls">
           <label>
             Layer
             <select id="layerSelect">
               <option value="trc1_full_sfc">Near-surface smoke</option>
-              <option value="trc1_full_1000ft">1000 ft AGL smoke</option>
-              <option value="trc1_full_6000ft">6000 ft AGL smoke</option>
               <option value="trc1_full_int">Vertically integrated smoke</option>
             </select>
           </label>
 
           <label>
-            Forecast hour (0-18)
-            <input id="frameSlider" type="range" min="0" max="18" value="0" step="1" />
+            Forecast hour (0-17)
+            <input id="frameSlider" type="range" min="0" max="17" value="0" step="1" />
           </label>
           <div class="frame-row">
             <span id="frameLabel">F000</span>
@@ -40,15 +38,15 @@
 
           <div class="button-row">
             <button id="refreshButton" type="button">Reload manifest</button>
-            <a id="openNoaaLink" href="https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/" target="_blank" rel="noreferrer">Open NOAA</a>
+            <a id="openNoaaLink" href="https://registry.opendata.aws/noaa-hrrr-pds/" target="_blank" rel="noreferrer">Open source</a>
           </div>
         </div>
 
-        <div class="status" id="statusBox">Loading NOAA manifest…</div>
+        <div class="status" id="statusBox">Loading smoke manifest…</div>
 
         <div class="notes">
-          <p><strong>Source:</strong> NOAA HRRR-Smoke.</p>
-          <p><strong>Mode:</strong> first 18 forecast hours are downloaded during GitHub Actions and served locally from GitHub Pages.</p>
+          <p><strong>Source:</strong> Public AWS HRRR Zarr.</p>
+          <p><strong>Mode:</strong> raw smoke fields are reprojected server-side and served locally from GitHub Pages.</p>
           <p id="runtimeMeta"></p>
         </div>
 
