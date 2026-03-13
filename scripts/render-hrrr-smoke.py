@@ -61,12 +61,19 @@ def cycle_candidates():
 def open_dataset(run_dt, layer):
     ymd = run_dt.strftime('%Y%m%d')
     hh = run_dt.strftime('%H')
-    store = f"s3://hrrrzarr/sfc/{ymd}/{ymd}_{hh}z_fcst.zarr/{layer['level']}/{layer['variable']}"
-    ds = xr.open_zarr(store, consolidated=False, storage_options={'anon': True})
+    store = f"s3://hrrrzarr/sfc/{ymd}/{ymd}_{hh}z_fcst.zarr"
+    group = f"{layer['level']}/{layer['variable']}/{layer['level']}/{layer['variable']}"
+    ds = xr.open_zarr(
+        store,
+        group=group,
+        consolidated=False,
+        storage_options={'anon': True},
+        decode_timedelta=False,
+    )
     var = ds[layer['variable']]
     if var.sizes.get('time', 0) < MAX_FRAME:
-        raise RuntimeError(f'insufficient time dimension in {store}')
-    return store, ds, var
+        raise RuntimeError(f'insufficient time dimension in {store} group {group}')
+    return f"{store}::{group}", ds, var
 
 
 def build_source_transform():
@@ -128,19 +135,23 @@ def main():
 
     chosen_run = None
     sources = {}
+    startup_logs = []
     for run_dt in cycle_candidates():
         try:
+            startup_logs.append(f"trying runtime {run_dt.strftime('%Y%m%d%H')}")
             for key, layer in LAYERS.items():
                 store, ds, var = open_dataset(run_dt, layer)
                 sources[key] = {'store': store, 'dataset': ds, 'var': var}
+                startup_logs.append(f"opened {key} from {store}")
             chosen_run = run_dt
             break
-        except Exception:
+        except Exception as e:
+            startup_logs.append(f"failed runtime {run_dt.strftime('%Y%m%d%H')}: {e}")
             sources = {}
             continue
 
     if chosen_run is None:
-        raise SystemExit('Could not open any recent HRRR smoke zarr run')
+        raise SystemExit('Could not open any recent HRRR smoke zarr run\n' + '\n'.join(startup_logs))
 
     runtime = chosen_run.strftime('%Y%m%d%H')
     runtime_cache = CACHE / runtime
@@ -158,7 +169,7 @@ def main():
         'runtimeSource': 'aws-hrrrzarr',
         'maxFrame': MAX_FRAME - 1,
         'bounds': None,
-        'logs': [f'using runtime {runtime} from public AWS HRRR Zarr'],
+        'logs': startup_logs + [f'using runtime {runtime} from public AWS HRRR Zarr'],
         'layers': {},
     }
 
