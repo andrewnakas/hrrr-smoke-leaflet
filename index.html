@@ -23,7 +23,15 @@
           </label>
 
           <label>
-            Forecast hour (0-17)
+            Forecast mode
+            <select id="forecastModeSelect">
+              <option value="hourly">Hourly</option>
+              <option value="6hour">48h outlook (6-hour steps)</option>
+            </select>
+          </label>
+
+          <label>
+            Forecast hour
             <input id="frameSlider" type="range" min="0" max="17" value="0" step="1" />
           </label>
           <div class="frame-row">

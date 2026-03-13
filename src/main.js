@@ -4,6 +4,7 @@ const els = {
   layerSelect: document.querySelector('#layerSelect'),
   frameSlider: document.querySelector('#frameSlider'),
   frameLabel: document.querySelector('#frameLabel'),
+  forecastModeSelect: document.querySelector('#forecastModeSelect'),
   playButton: document.querySelector('#playButton'),
   refreshButton: document.querySelector('#refreshButton'),
   opacitySlider: document.querySelector('#opacitySlider'),
@@ -22,6 +23,7 @@ const state = {
   manifest: null,
   frame: 0,
   layer: els.layerSelect.value,
+  forecastMode: 'hourly',
   playing: false,
   timer: null,
   opacity: Number(els.opacitySlider.value),
@@ -185,9 +187,18 @@ function applyOverlay(url) {
   analyzeOverlay(url, bounds);
 }
 
-function nearestAvailableFrame(requested) {
+function activeAvailableFrames() {
   const layer = getLayerData();
   const available = layer?.availableFrames || [];
+  if (state.forecastMode === '6hour') {
+    const sixes = available.filter((f) => f % 6 === 0);
+    return sixes.length ? sixes : available;
+  }
+  return available;
+}
+
+function nearestAvailableFrame(requested) {
+  const available = activeAvailableFrames();
   if (available.includes(requested)) return requested;
   const next = available.find((f) => f >= requested);
   if (next != null) return next;
@@ -230,6 +241,7 @@ async function loadManifest() {
     const bounds = manifest.bounds || DEFAULT_BOUNDS;
     smokeBoundsRect.setBounds(bounds);
     els.frameSlider.max = String(manifest.maxFrame ?? 17);
+    els.frameSlider.step = state.forecastMode === '6hour' ? '6' : '1';
     els.runtimeMeta.textContent = `Runtime: ${manifest.runtime} · source: ${manifest.runtimeSource} · generated: ${manifest.generatedAt}`;
     log('manifest loaded', { runtime: manifest.runtime, source: manifest.runtimeSource, maxFrame: manifest.maxFrame, bounds: manifest.bounds, logs: manifest.logs?.slice(-8) });
     updateMap();
@@ -251,10 +263,12 @@ function stopPlayback() {
 function startPlayback() {
   state.playing = true;
   els.playButton.textContent = 'Pause';
-  const max = Number(els.frameSlider.max || 17);
-  log('playback started', { max });
+  const available = activeAvailableFrames();
+  log('playback started', { available });
   state.timer = setInterval(() => {
-    state.frame = (state.frame + 1) % (max + 1);
+    const idx = available.indexOf(state.frame);
+    const next = available[(idx + 1) % available.length] ?? available[0] ?? 0;
+    state.frame = next;
     els.frameSlider.value = String(state.frame);
     updateMap();
   }, 1200);
@@ -268,7 +282,14 @@ els.layerSelect.addEventListener('change', () => {
 
 els.frameSlider.addEventListener('input', () => {
   state.frame = Number(els.frameSlider.value);
-  log('frame changed', { frame: state.frame });
+  log('frame changed', { frame: state.frame, mode: state.forecastMode });
+  updateMap();
+});
+
+els.forecastModeSelect.addEventListener('change', () => {
+  state.forecastMode = els.forecastModeSelect.value;
+  els.frameSlider.step = state.forecastMode === '6hour' ? '6' : '1';
+  log('forecast mode changed', { mode: state.forecastMode });
   updateMap();
 });
 

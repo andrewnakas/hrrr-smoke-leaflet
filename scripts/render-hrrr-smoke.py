@@ -21,7 +21,7 @@ OUT = PUBLIC / 'latest.json'
 CACHE = PUBLIC / 'cache-raw'
 
 PROJ4 = '+proj=lcc +a=6371200.0 +b=6371200.0 +lon_0=262.5 +lat_0=38.5 +lat_1=38.5 +lat_2=38.5'
-MAX_FRAME = 18
+MAX_RENDER_FRAME = 48
 LAYERS = {
     'trc1_full_sfc': {
         'label': 'Near-surface smoke',
@@ -72,7 +72,7 @@ def open_dataset(run_dt, layer):
     x = np.asarray(zg['projection_x_coordinate'])
     y = np.asarray(zg['projection_y_coordinate'])
 
-    if data.shape[0] < MAX_FRAME:
+    if data.shape[0] < 2:
         raise RuntimeError(f'insufficient time dimension in {store} group {group}')
 
     var = xr.DataArray(
@@ -185,7 +185,7 @@ def main():
         'generatedAt': datetime.now(timezone.utc).isoformat(),
         'runtime': runtime,
         'runtimeSource': 'aws-hrrrzarr',
-        'maxFrame': MAX_FRAME - 1,
+        'maxFrame': 0,
         'bounds': None,
         'logs': startup_logs + [f'using runtime {runtime} from public AWS HRRR Zarr'],
         'layers': {},
@@ -201,7 +201,9 @@ def main():
         frames = []
         available = []
         layer_bounds = None
-        for frame in range(MAX_FRAME):
+        frame_count = min(int(var.sizes['time']), MAX_RENDER_FRAME + 1)
+        manifest['logs'].append(f"frame count {key}: {frame_count}")
+        for frame in range(frame_count):
             try:
                 data = var.isel(time=frame).values
                 rgba = smoke_rgba(data, layer['scale_max'])
@@ -220,6 +222,7 @@ def main():
             'availableFrames': available,
             'store': sources[key]['store'],
         }
+        manifest['maxFrame'] = max(manifest['maxFrame'], (available[-1] if available else 0))
         if layer_bounds is not None and manifest['bounds'] is None:
             manifest['bounds'] = layer_bounds
 
