@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-13T07:13:55.066946+00:00",
-  "runtime": "2026031300",
+  "generatedAt": "2026-03-13T08:33:28.408003+00:00",
+  "runtime": "2026031306",
   "runtimeSource": "aws-hrrrzarr",
   "maxFrame": 17,
   "bounds": [
@@ -15,11 +15,9 @@
   ],
   "logs": [
     "trying runtime 2026031306",
-    "failed runtime 2026031306: group not found at path '8m_above_ground/MASSDEN'",
-    "trying runtime 2026031300",
-    "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::8m_above_ground/MASSDEN",
-    "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
-    "using runtime 2026031300 from public AWS HRRR Zarr",
+    "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN",
+    "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
+    "using runtime 2026031306 from public AWS HRRR Zarr",
     "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
     "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)"
   ],
@@ -30,92 +28,92 @@
       "frames": [
         {
           "frame": 0,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f000.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f000.png",
           "cached": true
         },
         {
           "frame": 1,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f001.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f001.png",
           "cached": true
         },
         {
           "frame": 2,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f002.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f002.png",
           "cached": true
         },
         {
           "frame": 3,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f003.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f003.png",
           "cached": true
         },
         {
           "frame": 4,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f004.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f004.png",
           "cached": true
         },
         {
           "frame": 5,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f005.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f005.png",
           "cached": true
         },
         {
           "frame": 6,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f006.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f006.png",
           "cached": true
         },
         {
           "frame": 7,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f007.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f007.png",
           "cached": true
         },
         {
           "frame": 8,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f008.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f008.png",
           "cached": true
         },
         {
           "frame": 9,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f009.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f009.png",
           "cached": true
         },
         {
           "frame": 10,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f010.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f010.png",
           "cached": true
         },
         {
           "frame": 11,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f011.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f011.png",
           "cached": true
         },
         {
           "frame": 12,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f012.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f012.png",
           "cached": true
         },
         {
           "frame": 13,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f013.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f013.png",
           "cached": true
         },
         {
           "frame": 14,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f014.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f014.png",
           "cached": true
         },
         {
           "frame": 15,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f015.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f015.png",
           "cached": true
         },
         {
           "frame": 16,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f016.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f016.png",
           "cached": true
         },
         {
           "frame": 17,
-          "url": "./cache-raw/2026031300/trc1_full_sfc/f017.png",
+          "url": "./cache-raw/2026031306/trc1_full_sfc/f017.png",
           "cached": true
         }
       ],
@@ -139,7 +137,7 @@
         16,
         17
       ],
-      "store": "s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::8m_above_ground/MASSDEN"
+      "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN"
     },
     "trc1_full_int": {
       "label": "Vertically integrated smoke",
@@ -147,92 +145,92 @@
       "frames": [
         {
           "frame": 0,
-          "url": "./cache-raw/2026031300/trc1_full_int/f000.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f000.png",
           "cached": true
         },
         {
           "frame": 1,
-          "url": "./cache-raw/2026031300/trc1_full_int/f001.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f001.png",
           "cached": true
         },
         {
           "frame": 2,
-          "url": "./cache-raw/2026031300/trc1_full_int/f002.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f002.png",
           "cached": true
         },
         {
           "frame": 3,
-          "url": "./cache-raw/2026031300/trc1_full_int/f003.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f003.png",
           "cached": true
         },
         {
           "frame": 4,
-          "url": "./cache-raw/2026031300/trc1_full_int/f004.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f004.png",
           "cached": true
         },
         {
           "frame": 5,
-          "url": "./cache-raw/2026031300/trc1_full_int/f005.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f005.png",
           "cached": true
         },
         {
           "frame": 6,
-          "url": "./cache-raw/2026031300/trc1_full_int/f006.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f006.png",
           "cached": true
         },
         {
           "frame": 7,
-          "url": "./cache-raw/2026031300/trc1_full_int/f007.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f007.png",
           "cached": true
         },
         {
           "frame": 8,
-          "url": "./cache-raw/2026031300/trc1_full_int/f008.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f008.png",
           "cached": true
         },
         {
           "frame": 9,
-          "url": "./cache-raw/2026031300/trc1_full_int/f009.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f009.png",
           "cached": true
         },
         {
           "frame": 10,
-          "url": "./cache-raw/2026031300/trc1_full_int/f010.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f010.png",
           "cached": true
         },
         {
           "frame": 11,
-          "url": "./cache-raw/2026031300/trc1_full_int/f011.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f011.png",
           "cached": true
         },
         {
           "frame": 12,
-          "url": "./cache-raw/2026031300/trc1_full_int/f012.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f012.png",
           "cached": true
         },
         {
           "frame": 13,
-          "url": "./cache-raw/2026031300/trc1_full_int/f013.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f013.png",
           "cached": true
         },
         {
           "frame": 14,
-          "url": "./cache-raw/2026031300/trc1_full_int/f014.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f014.png",
           "cached": true
         },
         {
           "frame": 15,
-          "url": "./cache-raw/2026031300/trc1_full_int/f015.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f015.png",
           "cached": true
         },
         {
           "frame": 16,
-          "url": "./cache-raw/2026031300/trc1_full_int/f016.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f016.png",
           "cached": true
         },
         {
           "frame": 17,
-          "url": "./cache-raw/2026031300/trc1_full_int/f017.png",
+          "url": "./cache-raw/2026031306/trc1_full_int/f017.png",
           "cached": true
         }
       ],
@@ -256,7 +254,7 @@
         16,
         17
       ],
-      "store": "s3://hrrrzarr/sfc/20260313/20260313_00z_fcst.zarr::entire_atmosphere_single_layer/COLMD"
+      "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD"
     }
   }
 }
