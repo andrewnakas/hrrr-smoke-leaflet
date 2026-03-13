@@ -1,8 +1,904 @@
 {
-  "generatedAt": "2026-03-13T08:40:00.195436+00:00",
+  "generatedAt": "2026-03-13T08:58:23.206413+00:00",
   "runtime": "2026031306",
   "runtimeSource": "aws-hrrrzarr",
-  "maxFrame": 47,
+  "modes": {
+    "hourly": {
+      "runtime": "2026031306",
+      "longOnlyCycle": false,
+      "maxFrame": 18,
+      "bounds": [
+        [
+          21.117672277392828,
+          -134.12161459032944
+        ],
+        [
+          52.61767227739283,
+          -60.87161459032944
+        ]
+      ],
+      "logs": [
+        "trying runtime 2026031306 long_only=False",
+        "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN",
+        "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
+        "using runtime 2026031306 from public AWS HRRR Zarr mode=hourly",
+        "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+        "frame count trc1_full_sfc: 19",
+        "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+        "frame count trc1_full_int: 19"
+      ],
+      "layers": {
+        "trc1_full_sfc": {
+          "label": "Near-surface smoke",
+          "units": "kg/m^3",
+          "frames": [
+            {
+              "frame": 0,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f000.png",
+              "cached": true
+            },
+            {
+              "frame": 1,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f001.png",
+              "cached": true
+            },
+            {
+              "frame": 2,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f002.png",
+              "cached": true
+            },
+            {
+              "frame": 3,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f003.png",
+              "cached": true
+            },
+            {
+              "frame": 4,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f004.png",
+              "cached": true
+            },
+            {
+              "frame": 5,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f005.png",
+              "cached": true
+            },
+            {
+              "frame": 6,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f006.png",
+              "cached": true
+            },
+            {
+              "frame": 7,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f007.png",
+              "cached": true
+            },
+            {
+              "frame": 8,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f008.png",
+              "cached": true
+            },
+            {
+              "frame": 9,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f009.png",
+              "cached": true
+            },
+            {
+              "frame": 10,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f010.png",
+              "cached": true
+            },
+            {
+              "frame": 11,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f011.png",
+              "cached": true
+            },
+            {
+              "frame": 12,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f012.png",
+              "cached": true
+            },
+            {
+              "frame": 13,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f013.png",
+              "cached": true
+            },
+            {
+              "frame": 14,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f014.png",
+              "cached": true
+            },
+            {
+              "frame": 15,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f015.png",
+              "cached": true
+            },
+            {
+              "frame": 16,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f016.png",
+              "cached": true
+            },
+            {
+              "frame": 17,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f017.png",
+              "cached": true
+            },
+            {
+              "frame": 18,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f018.png",
+              "cached": true
+            }
+          ],
+          "availableFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN"
+        },
+        "trc1_full_int": {
+          "label": "Vertically integrated smoke",
+          "units": "kg/m^2",
+          "frames": [
+            {
+              "frame": 0,
+              "url": "./cache-raw/2026031306/trc1_full_int/f000.png",
+              "cached": true
+            },
+            {
+              "frame": 1,
+              "url": "./cache-raw/2026031306/trc1_full_int/f001.png",
+              "cached": true
+            },
+            {
+              "frame": 2,
+              "url": "./cache-raw/2026031306/trc1_full_int/f002.png",
+              "cached": true
+            },
+            {
+              "frame": 3,
+              "url": "./cache-raw/2026031306/trc1_full_int/f003.png",
+              "cached": true
+            },
+            {
+              "frame": 4,
+              "url": "./cache-raw/2026031306/trc1_full_int/f004.png",
+              "cached": true
+            },
+            {
+              "frame": 5,
+              "url": "./cache-raw/2026031306/trc1_full_int/f005.png",
+              "cached": true
+            },
+            {
+              "frame": 6,
+              "url": "./cache-raw/2026031306/trc1_full_int/f006.png",
+              "cached": true
+            },
+            {
+              "frame": 7,
+              "url": "./cache-raw/2026031306/trc1_full_int/f007.png",
+              "cached": true
+            },
+            {
+              "frame": 8,
+              "url": "./cache-raw/2026031306/trc1_full_int/f008.png",
+              "cached": true
+            },
+            {
+              "frame": 9,
+              "url": "./cache-raw/2026031306/trc1_full_int/f009.png",
+              "cached": true
+            },
+            {
+              "frame": 10,
+              "url": "./cache-raw/2026031306/trc1_full_int/f010.png",
+              "cached": true
+            },
+            {
+              "frame": 11,
+              "url": "./cache-raw/2026031306/trc1_full_int/f011.png",
+              "cached": true
+            },
+            {
+              "frame": 12,
+              "url": "./cache-raw/2026031306/trc1_full_int/f012.png",
+              "cached": true
+            },
+            {
+              "frame": 13,
+              "url": "./cache-raw/2026031306/trc1_full_int/f013.png",
+              "cached": true
+            },
+            {
+              "frame": 14,
+              "url": "./cache-raw/2026031306/trc1_full_int/f014.png",
+              "cached": true
+            },
+            {
+              "frame": 15,
+              "url": "./cache-raw/2026031306/trc1_full_int/f015.png",
+              "cached": true
+            },
+            {
+              "frame": 16,
+              "url": "./cache-raw/2026031306/trc1_full_int/f016.png",
+              "cached": true
+            },
+            {
+              "frame": 17,
+              "url": "./cache-raw/2026031306/trc1_full_int/f017.png",
+              "cached": true
+            },
+            {
+              "frame": 18,
+              "url": "./cache-raw/2026031306/trc1_full_int/f018.png",
+              "cached": true
+            }
+          ],
+          "availableFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD"
+        }
+      }
+    },
+    "long": {
+      "runtime": "2026031306",
+      "longOnlyCycle": true,
+      "maxFrame": 47,
+      "bounds": [
+        [
+          21.117672277392828,
+          -134.12161459032944
+        ],
+        [
+          52.61767227739283,
+          -60.87161459032944
+        ]
+      ],
+      "logs": [
+        "trying runtime 2026031306 long_only=True",
+        "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN",
+        "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
+        "using runtime 2026031306 from public AWS HRRR Zarr mode=long",
+        "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+        "frame count trc1_full_sfc: 48",
+        "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+        "frame count trc1_full_int: 48"
+      ],
+      "layers": {
+        "trc1_full_sfc": {
+          "label": "Near-surface smoke",
+          "units": "kg/m^3",
+          "frames": [
+            {
+              "frame": 0,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f000.png",
+              "cached": true
+            },
+            {
+              "frame": 1,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f001.png",
+              "cached": true
+            },
+            {
+              "frame": 2,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f002.png",
+              "cached": true
+            },
+            {
+              "frame": 3,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f003.png",
+              "cached": true
+            },
+            {
+              "frame": 4,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f004.png",
+              "cached": true
+            },
+            {
+              "frame": 5,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f005.png",
+              "cached": true
+            },
+            {
+              "frame": 6,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f006.png",
+              "cached": true
+            },
+            {
+              "frame": 7,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f007.png",
+              "cached": true
+            },
+            {
+              "frame": 8,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f008.png",
+              "cached": true
+            },
+            {
+              "frame": 9,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f009.png",
+              "cached": true
+            },
+            {
+              "frame": 10,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f010.png",
+              "cached": true
+            },
+            {
+              "frame": 11,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f011.png",
+              "cached": true
+            },
+            {
+              "frame": 12,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f012.png",
+              "cached": true
+            },
+            {
+              "frame": 13,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f013.png",
+              "cached": true
+            },
+            {
+              "frame": 14,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f014.png",
+              "cached": true
+            },
+            {
+              "frame": 15,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f015.png",
+              "cached": true
+            },
+            {
+              "frame": 16,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f016.png",
+              "cached": true
+            },
+            {
+              "frame": 17,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f017.png",
+              "cached": true
+            },
+            {
+              "frame": 18,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f018.png",
+              "cached": true
+            },
+            {
+              "frame": 19,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f019.png",
+              "cached": true
+            },
+            {
+              "frame": 20,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f020.png",
+              "cached": true
+            },
+            {
+              "frame": 21,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f021.png",
+              "cached": true
+            },
+            {
+              "frame": 22,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f022.png",
+              "cached": true
+            },
+            {
+              "frame": 23,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f023.png",
+              "cached": true
+            },
+            {
+              "frame": 24,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f024.png",
+              "cached": true
+            },
+            {
+              "frame": 25,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f025.png",
+              "cached": true
+            },
+            {
+              "frame": 26,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f026.png",
+              "cached": true
+            },
+            {
+              "frame": 27,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f027.png",
+              "cached": true
+            },
+            {
+              "frame": 28,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f028.png",
+              "cached": true
+            },
+            {
+              "frame": 29,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f029.png",
+              "cached": true
+            },
+            {
+              "frame": 30,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f030.png",
+              "cached": true
+            },
+            {
+              "frame": 31,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f031.png",
+              "cached": true
+            },
+            {
+              "frame": 32,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f032.png",
+              "cached": true
+            },
+            {
+              "frame": 33,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f033.png",
+              "cached": true
+            },
+            {
+              "frame": 34,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f034.png",
+              "cached": true
+            },
+            {
+              "frame": 35,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f035.png",
+              "cached": true
+            },
+            {
+              "frame": 36,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f036.png",
+              "cached": true
+            },
+            {
+              "frame": 37,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f037.png",
+              "cached": true
+            },
+            {
+              "frame": 38,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f038.png",
+              "cached": true
+            },
+            {
+              "frame": 39,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f039.png",
+              "cached": true
+            },
+            {
+              "frame": 40,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f040.png",
+              "cached": true
+            },
+            {
+              "frame": 41,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f041.png",
+              "cached": true
+            },
+            {
+              "frame": 42,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f042.png",
+              "cached": true
+            },
+            {
+              "frame": 43,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f043.png",
+              "cached": true
+            },
+            {
+              "frame": 44,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f044.png",
+              "cached": true
+            },
+            {
+              "frame": 45,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f045.png",
+              "cached": true
+            },
+            {
+              "frame": 46,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f046.png",
+              "cached": true
+            },
+            {
+              "frame": 47,
+              "url": "./cache-raw/2026031306/trc1_full_sfc/f047.png",
+              "cached": true
+            }
+          ],
+          "availableFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN"
+        },
+        "trc1_full_int": {
+          "label": "Vertically integrated smoke",
+          "units": "kg/m^2",
+          "frames": [
+            {
+              "frame": 0,
+              "url": "./cache-raw/2026031306/trc1_full_int/f000.png",
+              "cached": true
+            },
+            {
+              "frame": 1,
+              "url": "./cache-raw/2026031306/trc1_full_int/f001.png",
+              "cached": true
+            },
+            {
+              "frame": 2,
+              "url": "./cache-raw/2026031306/trc1_full_int/f002.png",
+              "cached": true
+            },
+            {
+              "frame": 3,
+              "url": "./cache-raw/2026031306/trc1_full_int/f003.png",
+              "cached": true
+            },
+            {
+              "frame": 4,
+              "url": "./cache-raw/2026031306/trc1_full_int/f004.png",
+              "cached": true
+            },
+            {
+              "frame": 5,
+              "url": "./cache-raw/2026031306/trc1_full_int/f005.png",
+              "cached": true
+            },
+            {
+              "frame": 6,
+              "url": "./cache-raw/2026031306/trc1_full_int/f006.png",
+              "cached": true
+            },
+            {
+              "frame": 7,
+              "url": "./cache-raw/2026031306/trc1_full_int/f007.png",
+              "cached": true
+            },
+            {
+              "frame": 8,
+              "url": "./cache-raw/2026031306/trc1_full_int/f008.png",
+              "cached": true
+            },
+            {
+              "frame": 9,
+              "url": "./cache-raw/2026031306/trc1_full_int/f009.png",
+              "cached": true
+            },
+            {
+              "frame": 10,
+              "url": "./cache-raw/2026031306/trc1_full_int/f010.png",
+              "cached": true
+            },
+            {
+              "frame": 11,
+              "url": "./cache-raw/2026031306/trc1_full_int/f011.png",
+              "cached": true
+            },
+            {
+              "frame": 12,
+              "url": "./cache-raw/2026031306/trc1_full_int/f012.png",
+              "cached": true
+            },
+            {
+              "frame": 13,
+              "url": "./cache-raw/2026031306/trc1_full_int/f013.png",
+              "cached": true
+            },
+            {
+              "frame": 14,
+              "url": "./cache-raw/2026031306/trc1_full_int/f014.png",
+              "cached": true
+            },
+            {
+              "frame": 15,
+              "url": "./cache-raw/2026031306/trc1_full_int/f015.png",
+              "cached": true
+            },
+            {
+              "frame": 16,
+              "url": "./cache-raw/2026031306/trc1_full_int/f016.png",
+              "cached": true
+            },
+            {
+              "frame": 17,
+              "url": "./cache-raw/2026031306/trc1_full_int/f017.png",
+              "cached": true
+            },
+            {
+              "frame": 18,
+              "url": "./cache-raw/2026031306/trc1_full_int/f018.png",
+              "cached": true
+            },
+            {
+              "frame": 19,
+              "url": "./cache-raw/2026031306/trc1_full_int/f019.png",
+              "cached": true
+            },
+            {
+              "frame": 20,
+              "url": "./cache-raw/2026031306/trc1_full_int/f020.png",
+              "cached": true
+            },
+            {
+              "frame": 21,
+              "url": "./cache-raw/2026031306/trc1_full_int/f021.png",
+              "cached": true
+            },
+            {
+              "frame": 22,
+              "url": "./cache-raw/2026031306/trc1_full_int/f022.png",
+              "cached": true
+            },
+            {
+              "frame": 23,
+              "url": "./cache-raw/2026031306/trc1_full_int/f023.png",
+              "cached": true
+            },
+            {
+              "frame": 24,
+              "url": "./cache-raw/2026031306/trc1_full_int/f024.png",
+              "cached": true
+            },
+            {
+              "frame": 25,
+              "url": "./cache-raw/2026031306/trc1_full_int/f025.png",
+              "cached": true
+            },
+            {
+              "frame": 26,
+              "url": "./cache-raw/2026031306/trc1_full_int/f026.png",
+              "cached": true
+            },
+            {
+              "frame": 27,
+              "url": "./cache-raw/2026031306/trc1_full_int/f027.png",
+              "cached": true
+            },
+            {
+              "frame": 28,
+              "url": "./cache-raw/2026031306/trc1_full_int/f028.png",
+              "cached": true
+            },
+            {
+              "frame": 29,
+              "url": "./cache-raw/2026031306/trc1_full_int/f029.png",
+              "cached": true
+            },
+            {
+              "frame": 30,
+              "url": "./cache-raw/2026031306/trc1_full_int/f030.png",
+              "cached": true
+            },
+            {
+              "frame": 31,
+              "url": "./cache-raw/2026031306/trc1_full_int/f031.png",
+              "cached": true
+            },
+            {
+              "frame": 32,
+              "url": "./cache-raw/2026031306/trc1_full_int/f032.png",
+              "cached": true
+            },
+            {
+              "frame": 33,
+              "url": "./cache-raw/2026031306/trc1_full_int/f033.png",
+              "cached": true
+            },
+            {
+              "frame": 34,
+              "url": "./cache-raw/2026031306/trc1_full_int/f034.png",
+              "cached": true
+            },
+            {
+              "frame": 35,
+              "url": "./cache-raw/2026031306/trc1_full_int/f035.png",
+              "cached": true
+            },
+            {
+              "frame": 36,
+              "url": "./cache-raw/2026031306/trc1_full_int/f036.png",
+              "cached": true
+            },
+            {
+              "frame": 37,
+              "url": "./cache-raw/2026031306/trc1_full_int/f037.png",
+              "cached": true
+            },
+            {
+              "frame": 38,
+              "url": "./cache-raw/2026031306/trc1_full_int/f038.png",
+              "cached": true
+            },
+            {
+              "frame": 39,
+              "url": "./cache-raw/2026031306/trc1_full_int/f039.png",
+              "cached": true
+            },
+            {
+              "frame": 40,
+              "url": "./cache-raw/2026031306/trc1_full_int/f040.png",
+              "cached": true
+            },
+            {
+              "frame": 41,
+              "url": "./cache-raw/2026031306/trc1_full_int/f041.png",
+              "cached": true
+            },
+            {
+              "frame": 42,
+              "url": "./cache-raw/2026031306/trc1_full_int/f042.png",
+              "cached": true
+            },
+            {
+              "frame": 43,
+              "url": "./cache-raw/2026031306/trc1_full_int/f043.png",
+              "cached": true
+            },
+            {
+              "frame": 44,
+              "url": "./cache-raw/2026031306/trc1_full_int/f044.png",
+              "cached": true
+            },
+            {
+              "frame": 45,
+              "url": "./cache-raw/2026031306/trc1_full_int/f045.png",
+              "cached": true
+            },
+            {
+              "frame": 46,
+              "url": "./cache-raw/2026031306/trc1_full_int/f046.png",
+              "cached": true
+            },
+            {
+              "frame": 47,
+              "url": "./cache-raw/2026031306/trc1_full_int/f047.png",
+              "cached": true
+            }
+          ],
+          "availableFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD"
+        }
+      }
+    }
+  },
+  "maxFrame": 18,
   "bounds": [
     [
       21.117672277392828,
@@ -12,16 +908,6 @@
       52.61767227739283,
       -60.87161459032944
     ]
-  ],
-  "logs": [
-    "trying runtime 2026031306",
-    "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN",
-    "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
-    "using runtime 2026031306 from public AWS HRRR Zarr",
-    "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
-    "frame count trc1_full_sfc: 48",
-    "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
-    "frame count trc1_full_int: 48"
   ],
   "layers": {
     "trc1_full_sfc": {
@@ -122,151 +1008,6 @@
           "frame": 18,
           "url": "./cache-raw/2026031306/trc1_full_sfc/f018.png",
           "cached": true
-        },
-        {
-          "frame": 19,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f019.png",
-          "cached": true
-        },
-        {
-          "frame": 20,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f020.png",
-          "cached": true
-        },
-        {
-          "frame": 21,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f021.png",
-          "cached": true
-        },
-        {
-          "frame": 22,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f022.png",
-          "cached": true
-        },
-        {
-          "frame": 23,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f023.png",
-          "cached": true
-        },
-        {
-          "frame": 24,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f024.png",
-          "cached": true
-        },
-        {
-          "frame": 25,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f025.png",
-          "cached": true
-        },
-        {
-          "frame": 26,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f026.png",
-          "cached": true
-        },
-        {
-          "frame": 27,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f027.png",
-          "cached": true
-        },
-        {
-          "frame": 28,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f028.png",
-          "cached": true
-        },
-        {
-          "frame": 29,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f029.png",
-          "cached": true
-        },
-        {
-          "frame": 30,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f030.png",
-          "cached": true
-        },
-        {
-          "frame": 31,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f031.png",
-          "cached": true
-        },
-        {
-          "frame": 32,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f032.png",
-          "cached": true
-        },
-        {
-          "frame": 33,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f033.png",
-          "cached": true
-        },
-        {
-          "frame": 34,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f034.png",
-          "cached": true
-        },
-        {
-          "frame": 35,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f035.png",
-          "cached": true
-        },
-        {
-          "frame": 36,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f036.png",
-          "cached": true
-        },
-        {
-          "frame": 37,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f037.png",
-          "cached": true
-        },
-        {
-          "frame": 38,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f038.png",
-          "cached": true
-        },
-        {
-          "frame": 39,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f039.png",
-          "cached": true
-        },
-        {
-          "frame": 40,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f040.png",
-          "cached": true
-        },
-        {
-          "frame": 41,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f041.png",
-          "cached": true
-        },
-        {
-          "frame": 42,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f042.png",
-          "cached": true
-        },
-        {
-          "frame": 43,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f043.png",
-          "cached": true
-        },
-        {
-          "frame": 44,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f044.png",
-          "cached": true
-        },
-        {
-          "frame": 45,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f045.png",
-          "cached": true
-        },
-        {
-          "frame": 46,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f046.png",
-          "cached": true
-        },
-        {
-          "frame": 47,
-          "url": "./cache-raw/2026031306/trc1_full_sfc/f047.png",
-          "cached": true
         }
       ],
       "availableFrames": [
@@ -288,36 +1029,7 @@
         15,
         16,
         17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47
+        18
       ],
       "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN"
     },
@@ -419,151 +1131,6 @@
           "frame": 18,
           "url": "./cache-raw/2026031306/trc1_full_int/f018.png",
           "cached": true
-        },
-        {
-          "frame": 19,
-          "url": "./cache-raw/2026031306/trc1_full_int/f019.png",
-          "cached": true
-        },
-        {
-          "frame": 20,
-          "url": "./cache-raw/2026031306/trc1_full_int/f020.png",
-          "cached": true
-        },
-        {
-          "frame": 21,
-          "url": "./cache-raw/2026031306/trc1_full_int/f021.png",
-          "cached": true
-        },
-        {
-          "frame": 22,
-          "url": "./cache-raw/2026031306/trc1_full_int/f022.png",
-          "cached": true
-        },
-        {
-          "frame": 23,
-          "url": "./cache-raw/2026031306/trc1_full_int/f023.png",
-          "cached": true
-        },
-        {
-          "frame": 24,
-          "url": "./cache-raw/2026031306/trc1_full_int/f024.png",
-          "cached": true
-        },
-        {
-          "frame": 25,
-          "url": "./cache-raw/2026031306/trc1_full_int/f025.png",
-          "cached": true
-        },
-        {
-          "frame": 26,
-          "url": "./cache-raw/2026031306/trc1_full_int/f026.png",
-          "cached": true
-        },
-        {
-          "frame": 27,
-          "url": "./cache-raw/2026031306/trc1_full_int/f027.png",
-          "cached": true
-        },
-        {
-          "frame": 28,
-          "url": "./cache-raw/2026031306/trc1_full_int/f028.png",
-          "cached": true
-        },
-        {
-          "frame": 29,
-          "url": "./cache-raw/2026031306/trc1_full_int/f029.png",
-          "cached": true
-        },
-        {
-          "frame": 30,
-          "url": "./cache-raw/2026031306/trc1_full_int/f030.png",
-          "cached": true
-        },
-        {
-          "frame": 31,
-          "url": "./cache-raw/2026031306/trc1_full_int/f031.png",
-          "cached": true
-        },
-        {
-          "frame": 32,
-          "url": "./cache-raw/2026031306/trc1_full_int/f032.png",
-          "cached": true
-        },
-        {
-          "frame": 33,
-          "url": "./cache-raw/2026031306/trc1_full_int/f033.png",
-          "cached": true
-        },
-        {
-          "frame": 34,
-          "url": "./cache-raw/2026031306/trc1_full_int/f034.png",
-          "cached": true
-        },
-        {
-          "frame": 35,
-          "url": "./cache-raw/2026031306/trc1_full_int/f035.png",
-          "cached": true
-        },
-        {
-          "frame": 36,
-          "url": "./cache-raw/2026031306/trc1_full_int/f036.png",
-          "cached": true
-        },
-        {
-          "frame": 37,
-          "url": "./cache-raw/2026031306/trc1_full_int/f037.png",
-          "cached": true
-        },
-        {
-          "frame": 38,
-          "url": "./cache-raw/2026031306/trc1_full_int/f038.png",
-          "cached": true
-        },
-        {
-          "frame": 39,
-          "url": "./cache-raw/2026031306/trc1_full_int/f039.png",
-          "cached": true
-        },
-        {
-          "frame": 40,
-          "url": "./cache-raw/2026031306/trc1_full_int/f040.png",
-          "cached": true
-        },
-        {
-          "frame": 41,
-          "url": "./cache-raw/2026031306/trc1_full_int/f041.png",
-          "cached": true
-        },
-        {
-          "frame": 42,
-          "url": "./cache-raw/2026031306/trc1_full_int/f042.png",
-          "cached": true
-        },
-        {
-          "frame": 43,
-          "url": "./cache-raw/2026031306/trc1_full_int/f043.png",
-          "cached": true
-        },
-        {
-          "frame": 44,
-          "url": "./cache-raw/2026031306/trc1_full_int/f044.png",
-          "cached": true
-        },
-        {
-          "frame": 45,
-          "url": "./cache-raw/2026031306/trc1_full_int/f045.png",
-          "cached": true
-        },
-        {
-          "frame": 46,
-          "url": "./cache-raw/2026031306/trc1_full_int/f046.png",
-          "cached": true
-        },
-        {
-          "frame": 47,
-          "url": "./cache-raw/2026031306/trc1_full_int/f047.png",
-          "cached": true
         }
       ],
       "availableFrames": [
@@ -585,38 +1152,19 @@
         15,
         16,
         17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47
+        18
       ],
       "store": "s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD"
     }
-  }
+  },
+  "logs": [
+    "trying runtime 2026031306 long_only=False",
+    "opened trc1_full_sfc from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::8m_above_ground/MASSDEN",
+    "opened trc1_full_int from s3://hrrrzarr/sfc/20260313/20260313_06z_fcst.zarr::entire_atmosphere_single_layer/COLMD",
+    "using runtime 2026031306 from public AWS HRRR Zarr mode=hourly",
+    "source bounds trc1_full_sfc: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+    "frame count trc1_full_sfc: 19",
+    "source bounds trc1_full_int: (-2699020.1425219304, -1588806.1525566636, 2697979.8574780696, 1588193.8474433364)",
+    "frame count trc1_full_int: 19"
+  ]
 }
