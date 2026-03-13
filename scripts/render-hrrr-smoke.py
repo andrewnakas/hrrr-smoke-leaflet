@@ -7,7 +7,9 @@ from pathlib import Path
 
 import numpy as np
 import rasterio
+import s3fs
 import xarray as xr
+import zarr
 from PIL import Image
 from pyproj import CRS, Transformer
 from rasterio.transform import from_origin
@@ -63,17 +65,33 @@ def open_dataset(run_dt, layer):
     hh = run_dt.strftime('%H')
     store = f"s3://hrrrzarr/sfc/{ymd}/{ymd}_{hh}z_fcst.zarr"
     group = f"{layer['level']}/{layer['variable']}"
-    ds = xr.open_zarr(
-        store,
-        group=group,
-        consolidated=False,
-        storage_options={'anon': True},
-        decode_timedelta=False,
-    )
-    var = ds[layer['variable']]
-    if var.sizes.get('time', 0) < MAX_FRAME:
+    fs = s3fs.S3FileSystem(anon=True)
+    mapper = fs.get_mapper(store)
+    zg = zarr.open_group(mapper, mode='r', path=group)
+
+    data_key = f"{layer['level']}/{layer['variable']}"
+    if data_key not in zg:
+        raise RuntimeError(f'data array {data_key} not found in {store} group {group}; keys={list(zg.array_keys())}')
+
+    data = zg[data_key]
+    time = np.asarray(zg['time'])
+    x = np.asarray(zg['projection_x_coordinate'])
+    y = np.asarray(zg['projection_y_coordinate'])
+
+    if data.shape[0] < MAX_FRAME:
         raise RuntimeError(f'insufficient time dimension in {store} group {group}')
-    return f"{store}::{group}", ds, var
+
+    var = xr.DataArray(
+        data,
+        dims=('time', 'projection_y_coordinate', 'projection_x_coordinate'),
+        coords={
+            'time': time,
+            'projection_x_coordinate': x,
+            'projection_y_coordinate': y,
+        },
+        name=layer['variable'],
+    )
+    return f"{store}::{group}", None, var
 
 
 def build_source_transform():
