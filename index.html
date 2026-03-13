@@ -16,10 +16,7 @@
     <div id="app">
       <aside class="sidebar">
         <h1>HRRR Smoke Forecast</h1>
-        <p class="lede">
-          Leaflet-based forecast viewer for NOAA HRRR-Smoke. The map stays interactive while the
-          selected NOAA smoke frame animates in the viewer.
-        </p>
+        <p class="lede">NOAA HRRR-Smoke forecast frames rendered directly on the Leaflet map.</p>
 
         <div class="controls">
           <label>
@@ -44,39 +41,27 @@
           </div>
 
           <label>
-            Runtime (YYYYMMDDHH)
-            <input id="runtimeInput" type="text" inputmode="numeric" />
+            Opacity
+            <input id="opacitySlider" type="range" min="0.1" max="1" value="0.72" step="0.01" />
           </label>
 
           <div class="button-row">
-            <button id="refreshButton" type="button">Refresh latest runtime</button>
-            <a
-              id="openNoaaLink"
-              href="https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/"
-              target="_blank"
-              rel="noreferrer"
-              >Open NOAA page</a
-            >
+            <button id="refreshButton" type="button">Reload manifest</button>
+            <a id="openNoaaLink" href="https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/" target="_blank" rel="noreferrer">Open NOAA</a>
           </div>
         </div>
 
-        <div class="status" id="statusBox">Loading latest NOAA runtime…</div>
+        <div class="status" id="statusBox">Loading NOAA manifest…</div>
 
         <div class="notes">
-          <p><strong>How it works:</strong> this app parses NOAA’s HRRR-Smoke page for the latest runtime, then builds forecast frame URLs.</p>
-          <p><strong>Note:</strong> NOAA does not expose a clean CORS-friendly public tile API here, so the forecast frame is shown in an embedded viewer alongside the Leaflet map.</p>
+          <p><strong>Source:</strong> NOAA HRRR-Smoke.</p>
+          <p><strong>Deployment fix:</strong> GitHub Pages now reads a generated local manifest instead of scraping NOAA from the browser, which is what was failing before.</p>
+          <p id="runtimeMeta"></p>
         </div>
       </aside>
 
       <main class="main">
         <div id="map"></div>
-        <section class="viewer-card">
-          <div class="viewer-header">
-            <strong id="viewerTitle">Near-surface smoke</strong>
-            <span id="viewerMeta">Runtime — / Forecast —</span>
-          </div>
-          <iframe id="forecastFrame" title="HRRR smoke forecast frame"></iframe>
-        </section>
       </main>
     </div>
 

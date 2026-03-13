@@ -1,0 +1,1224 @@
+{
+  "generatedAt": "2026-03-13T03:25:17.666Z",
+  "runtime": "2026031223",
+  "runtimeSource": "live",
+  "bounds": [
+    [
+      21.5,
+      -129.5
+    ],
+    [
+      52.5,
+      -61
+    ]
+  ],
+  "maxFrame": 48,
+  "layers": {
+    "trc1_full_sfc": {
+      "label": "Near-surface smoke",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_sfc_f048.png"
+        }
+      ]
+    },
+    "trc1_full_1000ft": {
+      "label": "1000 ft AGL smoke",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_1000ft_f048.png"
+        }
+      ]
+    },
+    "trc1_full_6000ft": {
+      "label": "6000 ft AGL smoke",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_6000ft_f048.png"
+        }
+      ]
+    },
+    "trc1_full_int": {
+      "label": "Vertically integrated smoke",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/trc1_full_int_f048.png"
+        }
+      ]
+    },
+    "mfrp_full_sfc": {
+      "label": "Fire radiative power",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/mfrp_full_sfc_f048.png"
+        }
+      ]
+    },
+    "hpbl_full_sfc": {
+      "label": "PBL height",
+      "frames": [
+        {
+          "frame": 0,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f000.png"
+        },
+        {
+          "frame": 1,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f001.png"
+        },
+        {
+          "frame": 2,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f002.png"
+        },
+        {
+          "frame": 3,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f003.png"
+        },
+        {
+          "frame": 4,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f004.png"
+        },
+        {
+          "frame": 5,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f005.png"
+        },
+        {
+          "frame": 6,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f006.png"
+        },
+        {
+          "frame": 7,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f007.png"
+        },
+        {
+          "frame": 8,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f008.png"
+        },
+        {
+          "frame": 9,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f009.png"
+        },
+        {
+          "frame": 10,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f010.png"
+        },
+        {
+          "frame": 11,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f011.png"
+        },
+        {
+          "frame": 12,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f012.png"
+        },
+        {
+          "frame": 13,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f013.png"
+        },
+        {
+          "frame": 14,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f014.png"
+        },
+        {
+          "frame": 15,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f015.png"
+        },
+        {
+          "frame": 16,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f016.png"
+        },
+        {
+          "frame": 17,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f017.png"
+        },
+        {
+          "frame": 18,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f018.png"
+        },
+        {
+          "frame": 19,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f019.png"
+        },
+        {
+          "frame": 20,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f020.png"
+        },
+        {
+          "frame": 21,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f021.png"
+        },
+        {
+          "frame": 22,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f022.png"
+        },
+        {
+          "frame": 23,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f023.png"
+        },
+        {
+          "frame": 24,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f024.png"
+        },
+        {
+          "frame": 25,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f025.png"
+        },
+        {
+          "frame": 26,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f026.png"
+        },
+        {
+          "frame": 27,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f027.png"
+        },
+        {
+          "frame": 28,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f028.png"
+        },
+        {
+          "frame": 29,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f029.png"
+        },
+        {
+          "frame": 30,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f030.png"
+        },
+        {
+          "frame": 31,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f031.png"
+        },
+        {
+          "frame": 32,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f032.png"
+        },
+        {
+          "frame": 33,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f033.png"
+        },
+        {
+          "frame": 34,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f034.png"
+        },
+        {
+          "frame": 35,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f035.png"
+        },
+        {
+          "frame": 36,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f036.png"
+        },
+        {
+          "frame": 37,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f037.png"
+        },
+        {
+          "frame": 38,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f038.png"
+        },
+        {
+          "frame": 39,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f039.png"
+        },
+        {
+          "frame": 40,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f040.png"
+        },
+        {
+          "frame": 41,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f041.png"
+        },
+        {
+          "frame": 42,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f042.png"
+        },
+        {
+          "frame": 43,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f043.png"
+        },
+        {
+          "frame": 44,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f044.png"
+        },
+        {
+          "frame": 45,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f045.png"
+        },
+        {
+          "frame": 46,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f046.png"
+        },
+        {
+          "frame": 47,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f047.png"
+        },
+        {
+          "frame": 48,
+          "url": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/for_web/hrrr_ncep_smoke_jet/2026031223/full/hpbl_full_sfc_f048.png"
+        }
+      ]
+    }
+  }
+}
