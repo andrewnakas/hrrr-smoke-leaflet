@@ -62,7 +62,7 @@ def open_dataset(run_dt, layer):
     ymd = run_dt.strftime('%Y%m%d')
     hh = run_dt.strftime('%H')
     store = f"s3://hrrrzarr/sfc/{ymd}/{ymd}_{hh}z_fcst.zarr"
-    group = f"{layer['level']}/{layer['variable']}/{layer['level']}/{layer['variable']}"
+    group = f"{layer['level']}/{layer['variable']}"
     ds = xr.open_zarr(
         store,
         group=group,
