@@ -13,6 +13,9 @@ const els = {
   debugConsole: document.querySelector('#debugConsole'),
   copyConsoleButton: document.querySelector('#copyConsoleButton'),
   clearConsoleButton: document.querySelector('#clearConsoleButton'),
+  plumeCount: document.querySelector('#plumeCount'),
+  smokyArea: document.querySelector('#smokyArea'),
+  opaquePixels: document.querySelector('#opaquePixels'),
 };
 
 const state = {
@@ -24,6 +27,7 @@ const state = {
   opacity: Number(els.opacitySlider.value),
   overlay: null,
   logLines: [],
+  diagnosticsToken: 0,
 };
 
 function log(message, extra) {
@@ -36,17 +40,23 @@ function log(message, extra) {
   console.log(message, extra || '');
 }
 
+function setDiagnostics(plumes, areaSqMi, opaquePixels) {
+  els.plumeCount.textContent = plumes == null ? '—' : String(plumes);
+  els.smokyArea.textContent = areaSqMi == null ? '—' : `${Math.round(areaSqMi).toLocaleString()} sq mi`;
+  els.opaquePixels.textContent = opaquePixels == null ? '—' : opaquePixels.toLocaleString();
+}
+
 const map = L.map('map', { zoomControl: true, minZoom: 3, maxZoom: 10 }).setView([39.5, -98.35], 4);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
 
 const smokeBoundsRect = L.rectangle(DEFAULT_BOUNDS, { color: '#ffb347', weight: 1, fillOpacity: 0.05, dashArray: '6 6' }).addTo(map);
-smokeBoundsRect.bindTooltip('Approximate HRRR-Smoke full-domain extent');
+smokeBoundsRect.bindTooltip('Approximate HRRR smoke domain extent');
 
 const metaControl = L.control({ position: 'topright' });
 metaControl.onAdd = () => {
   const div = L.DomUtil.create('div', 'map-badge');
   div.id = 'mapBadge';
-  div.textContent = 'Loading NOAA smoke…';
+  div.textContent = 'Loading smoke…';
   return div;
 };
 metaControl.addTo(map);
@@ -78,12 +88,88 @@ function currentLocalUrl() {
   return getFrameRecord()?.url || null;
 }
 
+async function analyzeOverlay(url, bounds) {
+  const token = ++state.diagnosticsToken;
+  setDiagnostics(null, null, null);
+  try {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = `${url}${url.includes('?') ? '&' : '?'}diag=${Date.now()}`;
+    await new Promise((resolve, reject) => {
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+    if (token !== state.diagnosticsToken) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    ctx.drawImage(img, 0, 0);
+    const { data } = ctx.getImageData(0, 0, img.width, img.height);
+
+    const width = img.width;
+    const height = img.height;
+    const mask = new Uint8Array(width * height);
+    let opaquePixels = 0;
+    for (let i = 0; i < width * height; i += 1) {
+      const alpha = data[i * 4 + 3];
+      if (alpha > 8) {
+        mask[i] = 1;
+        opaquePixels += 1;
+      }
+    }
+
+    let plumes = 0;
+    const queue = new Uint32Array(width * height);
+    for (let i = 0; i < mask.length; i += 1) {
+      if (!mask[i]) continue;
+      plumes += 1;
+      let head = 0;
+      let tail = 0;
+      queue[tail++] = i;
+      mask[i] = 0;
+      while (head < tail) {
+        const idx = queue[head++];
+        const x = idx % width;
+        const y = (idx / width) | 0;
+        const neighbors = [idx - 1, idx + 1, idx - width, idx + width];
+        if (x === 0) neighbors[0] = -1;
+        if (x === width - 1) neighbors[1] = -1;
+        if (y === 0) neighbors[2] = -1;
+        if (y === height - 1) neighbors[3] = -1;
+        for (const n of neighbors) {
+          if (n >= 0 && mask[n]) {
+            mask[n] = 0;
+            queue[tail++] = n;
+          }
+        }
+      }
+    }
+
+    const latSpan = Math.abs(bounds[1][0] - bounds[0][0]);
+    const lonSpan = Math.abs(bounds[1][1] - bounds[0][1]);
+    const centerLat = (bounds[0][0] + bounds[1][0]) / 2;
+    const milesPerLat = 69.0;
+    const milesPerLon = 69.172 * Math.cos((centerLat * Math.PI) / 180);
+    const totalAreaSqMi = latSpan * milesPerLat * lonSpan * milesPerLon;
+    const smokyAreaSqMi = (opaquePixels / (width * height || 1)) * totalAreaSqMi;
+
+    setDiagnostics(plumes, smokyAreaSqMi, opaquePixels);
+    log('diagnostics updated', { plumes, smokyAreaSqMi: Math.round(smokyAreaSqMi), opaquePixels, width, height });
+  } catch (error) {
+    log('diagnostics failed', { message: error.message, url });
+    setDiagnostics(null, null, null);
+  }
+}
+
 function applyOverlay(url) {
   const bounds = state.manifest?.bounds || DEFAULT_BOUNDS;
   if (state.overlay) {
     state.overlay.setBounds(bounds);
     state.overlay.setUrl(url);
     state.overlay.setOpacity(state.opacity);
+    analyzeOverlay(url, bounds);
     return;
   }
 
@@ -96,6 +182,7 @@ function applyOverlay(url) {
     log('overlay error', record || { layer: state.layer, frame: state.frame });
     setStatus(`Cached image missing for ${state.layer} F${padFrame(state.frame)}.`);
   });
+  analyzeOverlay(url, bounds);
 }
 
 function nearestAvailableFrame(requested) {
@@ -122,18 +209,19 @@ function updateMap() {
   const record = getFrameRecord();
   if (!record?.url) {
     setStatus(`No cached frame available for ${label} F${frame}.`);
+    setDiagnostics(null, null, null);
     return;
   }
 
   applyOverlay(record.url);
   setMapBadge(`${label} · runtime ${state.manifest.runtime} · F${frame}`);
   els.frameLabel.textContent = `F${frame}`;
-  els.openNoaaLink.href = record.remoteUrl || 'https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/';
+  els.openNoaaLink.href = layer?.store || 'https://registry.opendata.aws/noaa-hrrr-pds/';
   setStatus(`Showing ${label}, runtime ${state.manifest.runtime}, forecast F${frame}.`);
 }
 
 async function loadManifest() {
-  setStatus('Loading NOAA manifest…');
+  setStatus('Loading smoke manifest…');
   try {
     const response = await fetch(`./latest.json?ts=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error(`Manifest HTTP ${response.status}`);
@@ -141,13 +229,13 @@ async function loadManifest() {
     state.manifest = manifest;
     const bounds = manifest.bounds || DEFAULT_BOUNDS;
     smokeBoundsRect.setBounds(bounds);
-    els.frameSlider.max = String(manifest.maxFrame ?? 18);
+    els.frameSlider.max = String(manifest.maxFrame ?? 17);
     els.runtimeMeta.textContent = `Runtime: ${manifest.runtime} · source: ${manifest.runtimeSource} · generated: ${manifest.generatedAt}`;
-    log('manifest loaded', { runtime: manifest.runtime, source: manifest.runtimeSource, maxFrame: manifest.maxFrame, logs: manifest.logs?.slice(-8) });
+    log('manifest loaded', { runtime: manifest.runtime, source: manifest.runtimeSource, maxFrame: manifest.maxFrame, bounds: manifest.bounds, logs: manifest.logs?.slice(-8) });
     updateMap();
   } catch (error) {
     log('manifest load failed', { message: error.message });
-    setStatus('Failed to load local NOAA manifest from GitHub Pages.');
+    setStatus('Failed to load local smoke manifest from GitHub Pages.');
     setMapBadge('Manifest load failed');
   }
 }
@@ -163,7 +251,7 @@ function stopPlayback() {
 function startPlayback() {
   state.playing = true;
   els.playButton.textContent = 'Pause';
-  const max = Number(els.frameSlider.max || 18);
+  const max = Number(els.frameSlider.max || 17);
   log('playback started', { max });
   state.timer = setInterval(() => {
     state.frame = (state.frame + 1) % (max + 1);
